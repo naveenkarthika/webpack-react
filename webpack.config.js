@@ -12,8 +12,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader', // injected into the dom
-                    'css-loader' // translate css into js
+                    'style-loader', // Inject style into dom
+                    'css-loader' // Turns css into js
                 ] // load reverse oreder
             }
         ]
