@@ -8,6 +8,6 @@ console.log(arr)
 
 alert("hello world")
 
-const alert = () => {
-    console.log('hello this arrow function')
-}
+console.log('hello this arrow function')
+
+console.log('hello this arrow function new')
