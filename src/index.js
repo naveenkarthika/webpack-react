@@ -11,3 +11,5 @@ alert("hello world")
 console.log('hello this arrow function')
 
 console.log('hello this arrow function new')
+
+console.log('production & development webpack config ready')
