@@ -1,4 +1,5 @@
 * {
-    background: purple;
-    color: rgb(251, 245, 245);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
