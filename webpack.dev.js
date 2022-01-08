@@ -39,4 +39,5 @@ module.exports = merge(common, {
     //     contentBase: path.resolve(__dirname, 'build')
     // }, // using webpack-dev-server use devServer object instead of output
     devtool: 'source-map',
+    target: 'web'
 });
