@@ -16,7 +16,8 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'build'),
+        assetModuleFilename: "images/[hash][ext][query]"
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -43,7 +44,7 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.(png|gif|jpe?g|svg)$/i,
-                type: 'asset/resource',
+                type: 'asset',
             },
             {
                 test: /\.(js|jsx)$/,
