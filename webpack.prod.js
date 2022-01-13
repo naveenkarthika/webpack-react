@@ -16,14 +16,14 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: "images/[hash][ext][query]"
     },
     plugins: [
+        new CleanWebpackPlugin(), // clean dist directory in rebuild
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
-        }),
-        new CleanWebpackPlugin(), // clean build directory in rebuild
+        })
     ],
     optimization: {
         minimizer: [
