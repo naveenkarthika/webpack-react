@@ -42,6 +42,10 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
+                test: /\.(png|gif|jpe?g|svg)$/i,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.(js|jsx)$/,
                 exclude: '/node_modules/',
                 use: ['babel-loader']
@@ -49,7 +53,10 @@ module.exports = merge(common, {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, // Inject style into dom
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: { publicPath: '' }
+                    }, // Inject style into dom
                     'css-loader' // Turns css into js
                 ] // load reverse oreder
             }

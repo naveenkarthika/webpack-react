@@ -1,9 +1,17 @@
 import React from 'react';
+import Image from './images/webpack.png'
+import svg from './images/happy.svg'
 
 function App() {
     return (
-        <div>
-            <h2>Welcome to React Webpack!!</h2>
+        <div className="app">
+            <header>
+                <h2>Welcome to React Webpack!!</h2>
+            </header>
+            <section>
+                <img src={Image} alt="no image" />
+                <img src={svg} alt="no image" />
+            </section>
         </div>
     )
 }

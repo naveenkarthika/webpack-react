@@ -32,6 +32,10 @@ module.exports = merge(common, {
                     'style-loader', // Inject style into dom
                     'css-loader' // Turns css into js
                 ] // load reverse oreder
+            },
+            {
+                test: /\.(png|gif|jpe?g|svg)$/i,
+                type: 'asset/resource',
             }
         ]
     },
