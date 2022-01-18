@@ -17,7 +17,8 @@ module.exports = merge(common, {
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: "images/[hash][ext][query]"
+        assetModuleFilename: "images/[hash][ext][query]",
+        clean: true,
     },
     plugins: [
         new CleanWebpackPlugin(), // clean dist directory in rebuild

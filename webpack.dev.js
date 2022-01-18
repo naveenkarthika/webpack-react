@@ -11,7 +11,8 @@ module.exports = merge(common, {
     mode: 'development',
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'build'),
+        clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
